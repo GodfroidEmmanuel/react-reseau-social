@@ -29,15 +29,11 @@ class App extends Component {
 
 ajouterRecette = recette => {
   const recettes = { ...this.state.recettes }
-  recettes[`recettes-${Date.now()}`] = recette
+  recettes[`recette-${Date.now()}`] = recette
   this.setState({ recettes })
 }
 
-majRecette = (key,newRecette => {
-  const recettes = { ...this.state.recettes }
-  recettes[key] = newRecette
-  this.setState({ recettes })
-})
+
 
   
 
