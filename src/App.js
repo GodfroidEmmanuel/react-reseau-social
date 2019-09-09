@@ -25,6 +25,7 @@ class App extends Component {
   conponentWillUnmount (){
     base.removeBinding(this.ref)
   }
+  chargerExemple = () => this.setState({recettes})
 
 ajouterRecette = recette => {
   const recettes = { ...this.state.recettes }
@@ -36,9 +37,9 @@ majRecette = (key,newRecette => {
   const recettes = { ...this.state.recettes }
   recettes[key] = newRecette
   this.setState({ recettes })
-}
+})
 
-  chargerExemple = () => this.setState({recettes})
+  
 
   render () {
     const cards = Object.keys(this.state.recettes)
